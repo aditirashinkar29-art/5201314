@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditi Rashinkar Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #1e293b;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #38bdf8;
+    }
+    header p {
+      margin: 5px 0;
+      color: #94a3b8;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: #111827;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    section h2 {
+      margin: 0;
+      padding: 15px;
+      background: #1e293b;
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: #7dd3fc;
+    }
+    .content {
+      padding: 20px;
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    .skills-list, .hobbies-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .badge {
+      background: rgba(56,189,248,0.2);
+      border: 1px solid #38bdf8;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: transform 0.2s;
+    }
+    .badge:hover {
+      transform: scale(1.1);
+      background: rgba(56,189,248,0.4);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aditi Rashinkar</h1>
+    <p>Electrical Engineer • Age 18</p>
+    <p>SSC: 98% | HSC: 95%</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2 onclick="toggleSection(this)">🎓 Education</h2>
+      <div class="content">
+        <p>Currently pursuing <strong>B.Tech in Electrical Engineering</strong> at <em>Sanjivani College of Engineering</em>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 onclick="toggleSection(this)">⚡ Skills</h2>
+      <div class="content skills-list">
+        <span class="badge">Problem Solving</span>
+        <span class="badge">Circuit Design</span>
+        <span class="badge">Programming (C/C++/Python)</span>
+        <span class="badge">Analytical Thinking</span>
+        <span class="badge">Teamwork</span>
+        <span class="badge">Project Management</span>
+      </div>
+    </section>
+
+    <section>
+      <h2 onclick="toggleSection(this)">🎯 Hobbies</h2>
+      <div class="content hobbies-list">
+        <span class="badge">Reading</span>
+        <span class="badge">Music</span>
+        <span class="badge">Traveling</span>
+        <span class="badge">Badminton</span>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function toggleSection(element) {
+      const content = element.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
